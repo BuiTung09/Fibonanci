@@ -1,8 +1,10 @@
 
 package main;
 
+import java.util.Scanner;
 
-public class Fibonanci{
+
+public class Fibonacci{
     public static int fibonanci (int numb) {
         if(numb <= 1){
             return numb;
@@ -11,12 +13,15 @@ public class Fibonanci{
             return fibonanci(numb - 1) + fibonanci(numb - 2);
     }
     public static void main(String[] args) {
-        System.out.println("The 45 sequence array: ");
-        for (int i = 0; i < 45; i++) {
-            if(i < 44){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Input n : ");
+        int n = sc.nextInt();
+        System.out.println("The " + n+ " sequence array: ");
+        for (int i = 0; i < n; i++) {
+            if(i < n-1){
                 System.out.print(fibonanci(i) + ", ");
         }
-            else System.out.print(fibonanci(44));
+            else System.out.print(fibonanci(n));
         }
         
     }
